@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage("deletaing user"){
             steps{
-               sh"sudo userdel jenkins" 
+               sh"sudo userdel BMD_jenkins" 
             }
         }
         stage("verifiy users"){
@@ -13,7 +13,7 @@ pipeline{
         }
         stage("adding user"){
            steps{
-            sh "sudo uaeradd jenkins"
+            sh "sudo uaeradd BMD_jenkins"
            }
            
         }
