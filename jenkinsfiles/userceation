@@ -31,8 +31,8 @@ pipeline{
         Success{
             echo" The Build is success"
         }
-        Failuer{
-            echo" The Build is Failuer"
+        Failure{
+            echo" The Build is Failure"
         }
     }
 }
