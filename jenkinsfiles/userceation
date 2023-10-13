@@ -3,12 +3,12 @@ pipeline{
     stages{
         stage("deletaing user"){
             steps{
-               sh"sudo userdel BMD_jenkins" 
+               sh "sudo userdel BMD_jenkins" 
             }
         }
         stage("verifiy users"){
             steps{
-               sh"sudo cat /etc/passwd"
+               sh "sudo cat /etc/passwd"
             }
         }
         stage("adding user"){
