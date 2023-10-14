@@ -1,23 +1,23 @@
-pipeline{
+pipeline {
     agent any
-    stages{
-        stage("deletaing user"){
-            steps{
+    stages {
+        stage("deletaing user") {
+            steps {
                sh "sudo userdel BMD_jenkins" 
             }
         }
-        stage("verifiy users"){
-            steps{
+        stage("verifiy users") {
+            steps {
                sh "sudo cat /etc/passwd"
             }
         }
-        stage("adding user"){
-           steps{
+        stage("adding user") {
+           steps {
             sh "sudo uaeradd BMD_jenkins"
            }
            
         }
-        stage("test"){
+        stage("test") {
             steps{
              sh'''
              echo a
@@ -28,10 +28,10 @@ pipeline{
         }
     }
     post {
-        success{
+        success {
             echo" The Build is success"
         }
-        failure{
+        failure {
             echo" The Build is Failure"
         }
     }
